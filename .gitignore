@@ -1,0 +1,26 @@
+# Documents sources téléchargés et PTAB de travail (non versionnés)
+/data/
+
+# Kotlin / Gradle
+backend/.gradle/
+backend/build/
+backend/.kotlin/
+*.class
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+
+# IDE / OS
+.idea/
+.vscode/
+*.iml
+.DS_Store
+
+# Secrets locaux
+.env
+*.local.env
