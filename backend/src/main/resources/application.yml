@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: bie-backend
+  datasource:
+    url: ${BIE_DB_URL:jdbc:postgresql://localhost:5432/bie}
+    username: ${BIE_DB_USER:bie}
+    password: ${BIE_DB_PASSWORD:bie}
+  flyway:
+    locations: classpath:db/migration
+  jackson:
+    default-property-inclusion: non_null
+
+server:
+  error:
+    include-message: always
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      probes:
+        enabled: true
+
+springdoc:
+  api-docs:
+    path: /api/openapi
+  swagger-ui:
+    path: /api/docs
